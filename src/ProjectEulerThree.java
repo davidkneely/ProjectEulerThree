@@ -2,14 +2,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by davidneely on 2/18/15.
+ * Computes the prime factors of long number.
  */
 public class ProjectEulerThree {
+  /**
+   * Computes the prime factors of a long number.
+   * @param args Ignored.
+   */
   public static void main(String[] args) {
-    computePrimeFactors(600851475143L);
+    List<Long> returnList = computePrimeFactors(600851475143L);
   }
 
-  public static void computePrimeFactors(long inputNumber) {
+  /**
+   * Computes the prime factors of a long number and returns an ArrayList of the prime factors.
+   * @param inputNumber The long input number.
+   * @return The ArrayList of prime factors.
+   */
+  public static List<Long> computePrimeFactors(long inputNumber) {
     long num = inputNumber;
     List<Long> factors = new ArrayList<>();
     long divider = 2;
@@ -20,6 +29,7 @@ public class ProjectEulerThree {
       }
         divider += 1;
     }
-    System.out.println(factors.toString());
+    //System.out.println(factors.toString());
+    return factors;
   }
 }
