@@ -6,7 +6,11 @@ import java.util.List;
  */
 public class ProjectEulerThree {
   public static void main(String[] args) {
-    long num = 600851475143L;
+    computePrimeFactors(600851475143L);
+  }
+
+  public static void computePrimeFactors(long inputNumber) {
+    long num = inputNumber;
     List<Long> factors = new ArrayList<>();
     long divider = 2;
     while (num > 1) {
